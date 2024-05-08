@@ -33,15 +33,32 @@ pageColorSelect.addEventListener('input', function() {
 });
 
 // Game Functions
-const words = ["hello", "world", "javascript", "hangman"];
-let selectedWord, remainingGuesses, guessedLetters;
-let currentPlayer, gameActive, gameState;
+const gamesData = [
+    { title: "Hangman", rating: "5", accessibility: "Fun for all" },
+    { title: "Tic Tac Toe", rating: "4.5", accessibility: "Fun for all" },
+    { title: "Rock Paper Scissors", rating: "4", accessibility: "Fun for all" },
+    { title: "Bokurano Daiboukenn 3", rating: "5", accessibility: "Games for the visually impaired" },
+    { title: "The Last of Us Part II", rating: "4.5", accessibility: "Games for the visually impaired" },
+    { title: "SEQUENCE STORM", rating: "4", accessibility: "Games for the visually impaired" },
+    { title: "Quentin C playroom", rating: "3.5", accessibility: "Games for the visually impaired" },
+    { title: "Gears Tactics", rating: "3", accessibility: "Games for the visually impaired" },
+    { title: "Fortnite", rating: "4", accessibility: "Games for the auditory disability" },
+    { title: "The Last Of Us Part II", rating: "3.5", accessibility: "Games for the auditory disability" },
+    { title: "Watch Dogs: Legion", rating: "4.5", accessibility: "Games for the auditory disability" },
+    { title: "Moss", rating: "4", accessibility: "Games for the auditory disability" },
+    { title: "Ancestors: The Humankind Odyssey", rating: "3", accessibility: "Games for the auditory disability" },
+    { title: "Fall Guys", rating: "4.5", accessibility: "Games for people with mental disability" },
+    { title: "Among Us", rating: "3.5", accessibility: "Games for people with mental disability" },
+    { title: "Ring Fit Adventure", rating: "4", accessibility: "Games for people with mental disability" },
+    { title: "Dungeons & Dragons", rating: "4.5", accessibility: "Games for people with mental disability" },
+    { title: "Minecraft", rating: "4", accessibility: "Games for people with mental disability" }
+];
 
 function showGame(game) {
     const gameArea = document.getElementById('gameArea');
     switch (game) {
         case 'hangman':
-            selectedWord = words[Math.floor(Math.random() * words.length)];
+            selectedWord = ["hello", "world", "javascript", "hangman"][Math.floor(Math.random() * 4)];
             remainingGuesses = 6;
             guessedLetters = [];
             gameArea.innerHTML = `
@@ -115,6 +132,7 @@ function handleGuess(letter) {
 }
 
 // Tic Tac Toe Functions
+let currentPlayer, gameActive, gameState;
 function initializeTicTacToe() {
     const grid = document.getElementById('ticTacToeGrid');
     grid.innerHTML = ''; // Clear previous content
@@ -190,8 +208,7 @@ function determineWinner(player, computer) {
 // Search Function
 function searchGames() {
     const query = document.getElementById('searchInput').value.toLowerCase();
-    const games = ['Hangman', 'Tic Tac Toe', 'Rock Paper Scissors'];
-    const results = games.filter(game => game.toLowerCase().includes(query));
+    const results = gamesData.filter(game => game.title.toLowerCase().includes(query));
     const searchResults = document.getElementById('searchResults');
-    searchResults.innerHTML = results.map(game => `<li onclick="showGame('${game.toLowerCase().replace(' ', '')}')">${game}</li>`).join('');
+    searchResults.innerHTML = results.map(game => `<li>${game.title} - Rating: ${game.rating}, Accessibility: ${game.accessibility}</li>`).join('');
 }
