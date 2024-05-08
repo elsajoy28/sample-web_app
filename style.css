@@ -1,16 +1,15 @@
-
 body, html {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
     background-color: #add8e6; /* Light blue background */
-    color: #00008b; /* Dark blue font color */
+    color: #ffffff; /* White font color */
 }
 
 header {
-    background-color: #6ca0dc; /* Medium blue for the header */
+    background-color: #0053a0; /* Dark blue for the header */
     color: #ffffff; /* White font color */
-    padding: 20px;
+    padding: 30px 20px;
     text-align: center;
 }
 
@@ -39,12 +38,12 @@ nav ul li a {
     padding: 8px 15px;
     border: 3px solid #ffffff;
     border-radius: 8px;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 nav ul li a:hover {
     background-color: #ffffff;
-    color: #6ca0dc;
+    color: #0053a0;
 }
 
 main {
@@ -54,16 +53,21 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    background-color: #0053a0;
+    border-radius: 15px;
+    margin: 30px 15%;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 footer {
-    background-color: #6ca0dc; /* Same blue as header */
+    background-color: #0053a0; /* Same dark blue as header */
     color: #ffffff; /* White font color */
     text-align: center;
     padding: 20px;
     position: fixed;
     bottom: 0;
     width: 100%;
+    box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.1);
 }
 
 #settings {
@@ -75,10 +79,15 @@ footer {
 #settings select,
 #settings input {
     margin: 0 10px;
+    color: #ffffff;
 }
 
 #settings input[type="range"] {
     cursor: ew-resize;
+    background: #ffffff;
+    outline: none;
+    border: 2px solid #0053a0;
+    border-radius: 5px;
 }
 
 .container {
@@ -88,7 +97,7 @@ footer {
     max-width: 800px;
     margin: 20px auto;
     padding: 20px;
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 255, 255, 0.1);
     border-radius: 12px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
 }
@@ -96,28 +105,35 @@ footer {
 .options-column {
     flex: 1;
     padding: 20px;
-    background-color: #d3e3f2; /* Very light blue */
+    background-color: rgba(255, 255, 255, 0.1); /* Very light transparent blue */
     border-radius: 8px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
     margin-right: 20px;
+    color: #ffffff;
 }
 
 #searchSection {
     text-align: center;
     margin-top: 20px;
+    background-color: #0053a0;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    color: #ffffff;
 }
 
 #searchInput {
     padding: 10px;
     margin-top: 10px;
     width: 80%;
-    border: 3px solid #6ca0dc;
+    border: 3px solid #ffffff;
     border-radius: 8px;
     transition: border-color 0.3s;
+    outline: none;
 }
 
 #searchInput:focus {
-    border-color: #00008b; /* Dark blue */
+    border-color: #0053a0; /* Dark blue */
     outline: none;
 }
 
@@ -125,20 +141,21 @@ footer {
     list-style-type: none;
     padding: 0;
     margin-top: 10px;
+    color: #ffffff;
 }
 
 #searchResults li {
     margin: 5px 0;
     padding: 10px;
-    background-color: #f4f4f4;
+    background-color: rgba(255, 255, 255, 0.2);
     cursor: pointer;
     transition: background-color 0.3s, transform 0.2s;
-    border: 3px solid #6ca0dc;
+    border: 3px solid #ffffff;
     border-radius: 8px;
 }
 
 #searchResults li:hover {
-    background-color: #ccc;
+    background-color: rgba(255, 255, 255, 0.4);
     transform: scale(1.05);
 }
 
@@ -147,21 +164,24 @@ footer {
     margin: 10px;
     font-size: 18px;
     cursor: pointer;
-    border: 3px solid #6ca0dc; /* Visible border for buttons */
+    border: 3px solid #ffffff; /* Visible border for buttons */
     border-radius: 8px;
-    background-color: #f4f4f4;
+    background-color: rgba(255, 255, 255, 0.2);
     transition: background-color 0.3s, transform 0.2s;
+    color: #ffffff;
 }
 
 .game-buttons button:hover {
-    background-color: #6ca0dc;
+    background-color: rgba(255, 255, 255, 0.4);
     transform: scale(1.1);
+    color: #0053a0;
 }
 
 .game-info {
     margin-top: 20px;
     font-size: 20px;
     font-weight: bold;
+    color: #ffffff;
 }
 
 .tictactoe-grid {
@@ -176,12 +196,12 @@ footer {
 .tictactoe-square {
     width: 120px;
     height: 120px;
-    background-color: #ddd;
+    background-color: rgba(255, 255, 255, 0.2);
     display: inline-flex;
     justify-content: center;
     align-items: center;
     font-size: 2.5rem;
-    border: 3px solid #00008b;
+    border: 3px solid #ffffff;
     margin: 0;
+    color: #ffffff;
 }
-
