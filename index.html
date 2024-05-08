@@ -18,32 +18,25 @@
         </nav>
     </header>
 
-    <section id="settings">
-        <h2>Settings</h2>
-        <div class="settings-group">
-            <label for="bgColor">Background Color:</label>
-            <input type="color" id="bgColor" onchange="changeBackgroundColor(this.value)">
-        </div>
-        <div class="settings-group">
-            <label for="fontSelect">Choose Font:</label>
-            <select id="fontSelect" onchange="changeFont(this.value)">
-                <option value="Arial">Arial</option>
-                <option value="Verdana">Verdana</option>
-                <option value="Times New Roman">Times New Roman</option>
-                <option value="Georgia">Georgia</option>
-            </select>
-        </div>
-        <div class="settings-group">
-            <label for="fontSizeRange">Font Size:</label>
-            <input type="range" id="fontSizeRange" min="12" max="24" value="16" onchange="changeFontSize(this.value + 'px')">
-        </div>
-    </section>
+    <div id="settings">
+        <label for="bgColor">Background Color:</label>
+        <input type="color" id="bgColor" onchange="changeBackgroundColor(this.value)">
+        <label for="fontSelect">Choose Font:</label>
+        <select id="fontSelect" onchange="changeFont(this.value)">
+            <option value="Arial">Arial</option>
+            <option value="Verdana">Verdana</option>
+            <option value="Times New Roman">Times New Roman</option>
+            <option value="Georgia">Georgia</option>
+        </select>
+        <label for="fontSizeRange">Font Size:</label>
+        <input type="range" id="fontSizeRange" min="12" max="24" value="16" onchange="changeFontSize(this.value + 'px')">
+    </div>
 
     <main id="gameArea">
         <!-- Game content will be loaded here -->
     </main>
 
-    <section id="accessibilityOptions">
+    <div id="accessibilityOptions">
         <h2>Accessibility Options</h2>
         <div class="container">
             <div class="options-column">
@@ -61,14 +54,13 @@
                 <input type="color" id="pageColorSelect">
             </div>
         </div>
-    </section>
+    </div>
 
-    <section id="searchSection">
+    <div id="searchSection">
         <h2>Search Games</h2>
-        <label for="searchInput" class="sr-only">Search Input</label>
         <input type="text" id="searchInput" placeholder="Search for a game..." oninput="searchGames()">
         <ul id="searchResults"></ul>
-    </section>
+    </div>
 
     <footer>
         <p>© 2024 FunZone Games</p>
