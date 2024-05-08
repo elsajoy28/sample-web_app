@@ -1,0 +1,185 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #add8e6; /* Light blue background */
+    color: #00008b; /* Dark blue font color */
+}
+
+header {
+    background-color: #6ca0dc; /* Medium blue for the header */
+    color: #ffffff; /* White font color */
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 3rem;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    letter-spacing: 2px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 15px;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ffffff; /* White font color */
+    font-weight: bold;
+    padding: 8px 15px;
+    border: 3px solid #ffffff;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #ffffff;
+    color: #6ca0dc;
+}
+
+main {
+    min-height: 400px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+footer {
+    background-color: #6ca0dc; /* Same blue as header */
+    color: #ffffff; /* White font color */
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+#settings {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#settings label,
+#settings select,
+#settings input {
+    margin: 0 10px;
+}
+
+#settings input[type="range"] {
+    cursor: ew-resize;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+
+.options-column {
+    flex: 1;
+    padding: 20px;
+    background-color: #d3e3f2; /* Very light blue */
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    margin-right: 20px;
+}
+
+#searchSection {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#searchInput {
+    padding: 10px;
+    margin-top: 10px;
+    width: 80%;
+    border: 3px solid #6ca0dc;
+    border-radius: 8px;
+    transition: border-color 0.3s;
+}
+
+#searchInput:focus {
+    border-color: #00008b; /* Dark blue */
+    outline: none;
+}
+
+#searchResults {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+#searchResults li {
+    margin: 5px 0;
+    padding: 10px;
+    background-color: #f4f4f4;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    border: 3px solid #6ca0dc;
+    border-radius: 8px;
+}
+
+#searchResults li:hover {
+    background-color: #ccc;
+    transform: scale(1.05);
+}
+
+.game-buttons button {
+    padding: 12px 20px;
+    margin: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    border: 3px solid #6ca0dc; /* Visible border for buttons */
+    border-radius: 8px;
+    background-color: #f4f4f4;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.game-buttons button:hover {
+    background-color: #6ca0dc;
+    transform: scale(1.1);
+}
+
+.game-info {
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.tictactoe-grid {
+    display: flex;
+    flex-direction: column;
+}
+
+.tictactoe-row {
+    display: flex;
+}
+
+.tictactoe-square {
+    width: 120px;
+    height: 120px;
+    background-color: #ddd;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    border: 3px solid #00008b;
+    margin: 0;
+}
